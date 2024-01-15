@@ -87,11 +87,13 @@ function CemberinAlani(yarıçap) {
 		3e. besyuzdenkucuksayilar dizisindeki sayıları küçükten büyüğe sıralayıp `siralisayilar` adındaki bir diziye aktarın (.sort metodunu kullanın)
 		
 		3f. `tekraredensayilar` adında bir dizi oluşturun. sayilar dizisi içerisindeki bazı sayılar birden fazla kere yazılmış. 
-    sayilar dizisi içerisinde birden fazla kez yazılmış sayıları tespit ederek kaç kere tekrar edildiğini belirten bir string oluşturulup `tekraredensayilar` dizisine aktarılmasını istiyoruz.
+    sayilar dizisi içerisinde birden fazla kez yazılmış sayıları tespit ederek kaç kere tekrar edildiğini belirten bir string oluşturulup 
+    `tekraredensayilar` dizisine aktarılmasını istiyoruz.
     Örnek string: "{sayı} sayısı {tekrarSayisi} kere tekrar edilmiştir"
 		ÖRNEK: sayilar dizisi içerisinde 45 sayısı 3 kere yazılmış. "45 sayısı 3 tekrar edilmiştir" stringini `tekraredensayilar` dizisine aktaracağız.
 		💡 İPUCU: Tekrar edilen sayıları ve kaç kere tekrar edildiğini kaydetmek için bir nesne tanımlamalısınız, 
-    bu görevi yapabilmek için en az 2 kere döngü yazmalısınız. Birinci döngüde hangi sayının kaç kere tekrar edildiğini tespit edip, 2. döngüde stringi oluşturup verilen diziye aktarmalısınız.
+    bu görevi yapabilmek için en az 2 kere döngü yazmalısınız. Birinci döngüde hangi sayının kaç kere tekrar edildiğini tespit edip,
+     2. döngüde stringi oluşturup verilen diziye aktarmalısınız.
 */
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
@@ -173,6 +175,31 @@ siralisayilar= besyuzdenkucuksayilar.sort( (a,b) => a-b   )
 /* kodlar buraya */
 
 // 3f çözümü
+obj = {} ;
+tekraredensayilar =[]; 
+ sayilar.forEach ( (num) => {
+
+    if (obj[num] === undefined) {
+
+      obj[num] = 1 ; 
+
+      }
+
+
+    else {obj[num] += 1 }
+
+    
+})
+
+ for( let key in obj) {
+
+tekraredensayilar.push(`${key} sayısı ${obj[key]} kere tekrar edilmiştir`)
+
+
+
+ }
+
+ console.log(tekraredensayilar)
 
 /* kodlar buraya */
 

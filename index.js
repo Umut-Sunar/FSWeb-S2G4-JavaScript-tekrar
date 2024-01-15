@@ -162,7 +162,8 @@ ucebolunenlerintoplami=ucetambolunenler.reduce(  (num,currentValue) =>  {
 /* kodlar buraya */
 
 // 3d çözümü
-besyuzdenkucuksayilar = sayilar.filter(  (num) => {  return num >500   })
+besyuzdenkucuksayilar = sayilar.filter(  (num) => {  return num <500   })
+
 
 
 /* kodlar buraya */
@@ -172,10 +173,11 @@ besyuzdenkucuksayilar = sayilar.filter(  (num) => {  return num >500   })
 siralisayilar= besyuzdenkucuksayilar.sort( (a,b) => a-b   )
 
 
+
 /* kodlar buraya */
 
 // 3f çözümü
-obj = {} ;
+let obj = {} ;
 tekraredensayilar =[]; 
  sayilar.forEach ( (num) => {
 
@@ -199,7 +201,7 @@ tekraredensayilar.push(`${key} sayısı ${obj[key]} kere tekrar edilmiştir`)
 
  }
 
- console.log(tekraredensayilar)
+
 
 /* kodlar buraya */
 
